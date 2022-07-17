@@ -3,7 +3,7 @@ import cv2
 import sys
 
 # You can use imread function for reading image
-img = cv2.imread("Images\\starry_night.jpg") # Read image
+img = cv2.imread("Samples\\Images\\starry_night.jpg") # Read image
 
 # You can check simply image readed or not by using is None
 if img is None: # If image is not readed
