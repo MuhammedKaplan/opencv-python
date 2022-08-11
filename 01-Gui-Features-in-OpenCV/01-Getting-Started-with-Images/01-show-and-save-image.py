@@ -12,15 +12,18 @@ if img is None: # If image is not readed
 # You can use imshow function for showing image
 cv2.imshow('Image', img) # Show image
 
-# If you want to wait for any key press to close window you can use waitKey function
-if cv2.waitKey(0) == ord("s"): # If you press "s" key
+# Wait a key
+key = cv2.waitKey(0) 
+
+# If key is 's' then save image
+if key == ord("s"): # If you press "s" key
     try:
         # You can use imwrite function for saving image
         cv2.imwrite('01-Getting-Started-with-Images\\output\\starry_night.png', img) # Save image
     except:
         sys.exit('Could not save image') # Exit program
 
-    # You can use destroyAllWindows function for closing all windows
-    cv2.destroyAllWindows() # Close all windows
-    sys.exit('Image saved') # Exit program
+# Else close window and exit program
+cv2.destroyAllWindows() # Close all windows
+sys.exit('Image saved') # Exit program
 
